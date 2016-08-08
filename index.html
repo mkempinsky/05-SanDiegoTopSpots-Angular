@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app= "topSpotsApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    
+    
+    
+
+</head>
+
+<body ng-controller= "spotsCtrl">
+	<ng-map center="[40.74, -74.18]"></ng-map>
+
+
+ 	<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right">TopSpots.com</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href=" ">Gallery</a></li>
+        <li><a href=" ">Blog</a></li>
+		      <div class="nav-wrapper">
+		      <form>
+		        <div class="input-field">
+		          <input id="search" type="search" required>
+		        </div>
+		      </form>
+    </div>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+	<h1>San Diego Top Spots</h1>
+
+	<table class="highlight" ngCloak>
+		<tr>
+		
+			<th>Name</th>
+			<th>Desctription</th>
+			<th>Location</th>
+		
+		</tr>
+		<tr ng-repeat= "spots in topSpots">
+			<td>{{spots.name}}</td>
+			<td>{{spots.description}}</td>
+			<td><a class="waves-effect waves-light btn">{{spots.location}}</a></td>
+		</tr>
+
+	</table>
+
+
+	   
+	    
+
+	<srcipt src= "angular-google-maps-street-view_dev_mapped.min.js.map"></srcipt>
+	<script src= "bower_components/angular/angular.js"></script>
+	<script src= "bower_components/jquery/dist/jquery.js"></script>
+	<script src= "index.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+
+</body>
+
+<footer class="page-footer">
+  <div class="container">
+    
+  </div>
+</footer>
+
+</html>

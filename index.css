@@ -1,0 +1,46 @@
+
+html{
+	font-family: Raleway;
+}
+
+body {
+	background-color: 	rgba(204,204,204, .1);
+}
+
+.highlight {
+	width: 90%;
+	margin-left: 5%;
+	background-color: white;
+}
+
+h1 {
+	margin-left: 5%;
+	margin-top: 100px;
+	color: rgb(85,85,85);
+}
+
+nav {
+	padding-top: 10px;
+	background-color: rgb(54,139,209);
+	height: 74px;
+}
+
+td,
+th {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.btn:hover{
+	background-color: rgb(54,139,209);
+}
+
+.btn {
+	background-color: rgb(167,205,242);
+}
+
+th{
+	background-color: rgba(85,85,85, .5);
+	color: white;
+}
+

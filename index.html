@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
     
     
@@ -13,7 +13,7 @@
 </head>
 
 <body ng-controller= "spotsCtrl">
-	<ng-map center="[40.74, -74.18]"></ng-map>
+	
 
 
  	<nav>
@@ -35,34 +35,50 @@
 
 
 
-
+	<div id= "main-heading">
 	<h1>San Diego Top Spots</h1>
+	
+	
+	<iframe class= "google-map .right-align" width="300" height="225" frameborder="0" style="border:2px solid grey" src="https://www.google.com/maps/embed/v1/view?zoom=9&center=32.7157%2C-117.1611&key=AIzaSyCsYhYU2ANVeTnY0_2Df_sk_UQI7QMu108" allowfullscreen></iframe>
+	</div>
 
-	<table class="highlight" ngCloak>
+
+	<table class="highlight z-depth-2" ngCloak>
 		<tr>
 		
 			<th>Name</th>
 			<th>Desctription</th>
 			<th>Location</th>
+			<th>More</th>
 		
 		</tr>
 		<tr ng-repeat= "spots in topSpots">
 			<td>{{spots.name}}</td>
 			<td>{{spots.description}}</td>
-			<td><a class="waves-effect waves-light btn">{{spots.location}}</a></td>
+			<td><a class="waves-effect waves-light btn" href= "https://www.google.com/maps?q={{spots.location[0]}},{{spots.location[1]}}">Map</a></td>
+			<td><a class="waves-effect waves-light btn" href= "{{spots.website}}">Website</a></td>
 		</tr>
 
 	</table>
+
+	  
 
 
 	   
 	    
 
-	<srcipt src= "angular-google-maps-street-view_dev_mapped.min.js.map"></srcipt>
+	
 	<script src= "bower_components/angular/angular.js"></script>
 	<script src= "bower_components/jquery/dist/jquery.js"></script>
 	<script src= "index.js"></script>
+
+	
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	
+
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
